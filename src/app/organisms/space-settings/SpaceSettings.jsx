@@ -16,6 +16,7 @@ import RoomAliases from '../../molecules/room-aliases/RoomAliases';
 import RoomPermissions from '../../molecules/room-permissions/RoomPermissions';
 import RoomMembers from '../../molecules/room-members/RoomMembers';
 import RoomEmojis from '../../molecules/room-emojis/RoomEmojis';
+import SpaceNotification from '../../molecules/space-notification/SpaceNotification';
 
 import UserIC from '../../../../public/res/ic/outlined/user.svg';
 import CrossIC from '../../../../public/res/ic/outlined/cross.svg';
@@ -80,6 +81,10 @@ function GeneralSettings({ roomId }) {
         >
           Leave
         </MenuItem>
+      </div>
+      <div className="space-settings__card">
+        <MenuHeader>Notification (Changing this will only affect you)</MenuHeader>
+        <SpaceNotification roomId={roomId} />
       </div>
       <div className="space-settings__card">
         <MenuHeader>Space visibility (who can join)</MenuHeader>
